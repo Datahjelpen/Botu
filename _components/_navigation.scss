@@ -1,0 +1,73 @@
+nav {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-grow: 1;
+		justify-content: flex-end;
+		margin: 0;
+		padding-left: 0;
+		height: $navigation-height;
+
+		> li {
+			height: $navigation-height;
+			line-height: $navigation-height;
+
+			a {
+				@include transition(0.25s);
+				display: block;
+				padding: 0 $padding-small;
+				width: 100%;
+				height: 100%;
+				line-height: $navigation-height;
+
+				&:hover,
+				&:focus {
+					@include transition(0.1s);
+					outline: none;
+				}
+
+				.icon {
+					line-height: $navigation-height;
+				}
+
+			}
+		}
+	}
+
+	&.dark {
+		ul {
+			> li {
+				a {
+					color: $cBlack;
+
+					&:hover,
+					&:focus {
+						color: $cBlack;
+						background-color: $cGrey;
+					}
+				}
+			}
+		}
+	}
+
+	&.light {
+		ul {
+			> li {
+				a {
+					color: $cPrimary;
+
+					&:hover,
+					&:focus {
+						color: $cWhite;
+						background-color: $cPrimary;
+					}
+				}
+			}
+		}
+	}
+}
