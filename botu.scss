@@ -1,4 +1,4 @@
-/*! botu.css v0.4.0 | MIT License | https://bearhagen.com/t/botu */
+/*! botu.css v0.4.2 | MIT License | https://bearhagen.com/t/botu */
 
 @import "_config/_getConfig.scss";
 @import "_config/reset.scss";
@@ -132,3 +132,4 @@ hr {
 	}
 }
 
+@import '_components/icons.scss';

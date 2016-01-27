@@ -1,0 +1,57 @@
+i {
+	display: inline-block;
+	text-align: center;
+	width: 1em;
+	height: 1em;
+	
+	&:before {
+		font-size: 1em;
+		line-height: 160%;
+		vertical-align: text-top;
+	}
+
+	&.icon {
+		&-left {
+			margin-right: 15px;
+		}
+
+		&-right {
+			margin-left: 15px;
+		}
+
+		&-large,
+		&-medium,
+		&-small {
+			&:before {
+				vertical-align: middle;
+			}
+		}
+
+		&-large {
+			width: 5em;
+			height: 5em;
+
+			&:before {
+				font-size: 5em;
+			}
+		}
+
+		&-medium {
+			width: 3em;
+			height: 3em;
+
+			&:before {
+				font-size: 3em;
+			}
+		}
+
+		&-small {
+			width: 1.5em;
+			height: 1.5em;
+
+			&:before {
+				font-size: 1.5em;
+			}
+		}
+	}
+}
