@@ -1,6 +1,8 @@
 /*! botu.css v0.2.0 | MIT License | https://bearhagen.com/t/botu */
+/*! botu.css v0.3.0 | MIT License | https://bearhagen.com/t/botu */
 
 @import "_config/_getConfig.scss";
+@import "_config/reset.scss";
 
 body {
 	color: $cText;
