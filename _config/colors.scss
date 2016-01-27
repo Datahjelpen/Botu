@@ -1,0 +1,71 @@
+$cWhite:		#FFFFFF;
+$cGrey:			#F7F7F7;
+$cBlack:		#171717;
+$cRed:			#FF1B1B;
+$cPurple:		#711BFF;
+$cBlue:			#11BBFF;
+$cNavy:			#1177FF;
+$cGreen:		#11FF71;
+$cYellow:		#F7FF17;
+$cOrange:		#FF711B;
+
+$cPrimary:		$cOrange;
+$cAccent:		$cBlue;
+$cText:			$cBlack;
+$cBackground:	$cGrey;
+
+$cAlert:		$cRed;
+$cWarning:		$cYellow;
+$cSuccess:		$cGreen;
+
+// Used in mixings generating
+// background colors,
+// text colors
+$c:
+	'white' $cWhite,
+	'grey' $cGrey,
+	'black' $cBlack,
+	'red' $cRed,
+	'purple' $cPurple,
+	'blue' $cBlue,
+	'green' $cGreen,
+	'yellow' $cYellow,
+	'orange' $cOrange,
+	'primary' $cPrimary,
+	'accent' $cAccent,
+	'alert' $cAlert,
+	'warning' $cWarning,
+	'success' $cSuccess;
+
+// Light and dark lists,
+// so it's easy to setup a mixing in
+// which colors get a dark or light text/background
+// depening on which list they are in
+$cLight:
+	'white' $cWhite,
+	'grey' $cGrey,
+	'green' $cGreen,
+	'blue' $cBlue,
+	'yellow' $cYellow,
+	'warning' $cWarning,
+	'success' $cSuccess;
+
+$cDark:
+	'black' $cBlack,
+	'red' $cRed,
+	'purple' $cPurple,
+	'orange' $cOrange,
+	'primary' $cPrimary,
+	'accent' $cAccent,
+	'alert' $cAlert;
+
+// used in buttons
+$cButtons:
+	'white' $cWhite,
+	'grey' $cGrey,
+	'black' $cBlack,
+	'primary' $cPrimary,
+	'accent' $cAccent,
+	'alert' $cAlert,
+	'warning' $cWarning,
+	'success' $cSuccess;

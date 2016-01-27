@@ -1,10 +1,12 @@
-/*! botu.css v0.1.0 | MIT License | https://bearhagen.com/t/botu */
+/*! botu.css v0.2.0 | MIT License | https://bearhagen.com/t/botu */
+
+@import "_config/_getConfig.scss";
 
 body {
-	color: #2b2b2b;
-	font-family: sans-serif, Helmet, Freesans;
+	color: $cText;
+	font-family: 'latoregular', $fonts;
 	font-size: 16px;
-	background-color: #fbfbfb;
+	background-color: $cBackground;
 }
 
 p,
@@ -20,20 +22,20 @@ ul {
 }
 
 a {
-	color: #2b2b2b;
+	color: $cText;
 	text-decoration: none;
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: #ff711a;
+		color: $cPrimary;
 	}
 
 	&.dont-change {
 		&:hover,
 		&:focus,
 		&:active {
-			color: #2b2b2b;
+			color: $cText;
 			text-decoration: none;
 		}
 	}
@@ -50,20 +52,20 @@ a {
 }
 
 ::selection {
-	color: #fff;
-	background: #2b2b2b;
+	color: $cWhite;
+	background: $cBlack;
 	text-shadow: none;
 }
 
 ::-moz-selection {
-	color: #fff;
-	background: #2b2b2b;
+	color: $cWhite;
+	background: $cBlack;
 	text-shadow: none;
 }
 
 hr {
 	display: block;
-	margin: 25px auto;
+	margin: $padding-small auto;
 	border: none;
 	height: 3px;
 	width: 50%;
@@ -79,21 +81,20 @@ hr {
 		&-small,
 		&-medium,
 		&-large {
-			display: block;
-			margin: 0 auto;
+			@include center('block');
 			width: 100%;
 		}
 	
 		&-small {
-			max-width: 480px;
+			max-width: $width-small;
 		}
 
 		&-medium {
-			max-width: 768px;
+			max-width: $width-medium;
 		}
 
 		&-large {
-			max-width: 1024px;
+			max-width: $width-large;
 		}
 	}
 }

@@ -1,0 +1,60 @@
+@mixin clear() {
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin transition($time: 0.25s, $property: all, $easing: cubic-bezier(.4,0,.2,1)) {
+	@if ($property != transform) {
+		-webkit-transition:  $property $time $easing;
+		-moz-transition:     $property $time $easing;
+		-o-transition:       $property $time $easing;
+		transition:          $property $time $easing;
+	} @else {
+		-webkit-transition:  -webkit-+$property $time $easing;
+		-moz-transition:     -moz-+$property $time $easing;
+		-o-transition:       -o-+$property $time $easing;
+		transition:          $property $time $easing;
+	}
+}
+
+@mixin transform($function, $value) {
+	-webkit-transform:  $function+"("+$value+")";
+	-moz-transform:     $function+"("+$value+")";
+	-ms-transform:      $function+"("+$value+")";
+	-o-transform:       $function+"("+$value+")";
+	transform:          $function+"("+$value+")";
+}
+
+@mixin center($type: '') {
+	@if $type == '' {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	@if $type == 'block' {
+		display: block;
+		@include center();
+	}
+
+	@if $type == 'v' {
+		@include transform(translateY, -50%);
+		position: absolute;
+		top: 50%;
+	}
+
+	@if $type == 'v-h' {
+		@include center('v');
+		@include center('block');
+		left: 0;
+		right: 0;
+	}
+}
