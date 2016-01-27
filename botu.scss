@@ -1,0 +1,130 @@
+/*! botu.css v0.1.0 | MIT License | https://bearhagen.com/t/botu */
+
+body {
+	color: #2b2b2b;
+	font-family: sans-serif, Helmet, Freesans;
+	font-size: 16px;
+	background-color: #fbfbfb;
+}
+
+p,
+li,
+tr {
+	line-height: 160%;
+}
+
+ul {
+	&.no-bullets {
+		list-style: none;
+	}
+}
+
+a {
+	color: #2b2b2b;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: #ff711a;
+	}
+
+	&.dont-change {
+		&:hover,
+		&:focus,
+		&:active {
+			color: #2b2b2b;
+			text-decoration: none;
+		}
+	}
+
+	&.link {
+		text-decoration: underline;
+	}
+}
+
+.links {
+	a {
+		text-decoration: underline;
+	}
+}
+
+::selection {
+	color: #fff;
+	background: #2b2b2b;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	color: #fff;
+	background: #2b2b2b;
+	text-shadow: none;
+}
+
+hr {
+	display: block;
+	margin: 25px auto;
+	border: none;
+	height: 3px;
+	width: 50%;
+}
+
+.layout {
+	&-full {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	&-square {
+		&-small,
+		&-medium,
+		&-large {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+		}
+	
+		&-small {
+			max-width: 480px;
+		}
+
+		&-medium {
+			max-width: 768px;
+		}
+
+		&-large {
+			max-width: 1024px;
+		}
+	}
+}
+
+.content {
+	a {
+		text-decoration: underline;
+	}
+
+	p {
+		font-size: 1.25em;
+		margin: 1em auto;
+		line-height: 200%;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 2em;
+		margin-bottom: 0;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+}
+
